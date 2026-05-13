@@ -1,0 +1,9 @@
+# Temp Excel lock files
+~$*.xlsx
+
+# macOS
+.DS_Store
+
+# R
+.Rhistory
+.RData
