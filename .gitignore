@@ -1,0 +1,16 @@
+# Models
+*.pkl
+*.pth
+
+# Jupyter
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Python environments
+.env
+venv/
+.venv/

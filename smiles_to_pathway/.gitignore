@@ -1,0 +1,23 @@
+# Large model and data files
+moable.pth
+data/GP_embedding_dict.zip
+data/GP_sig_df.pkl
+
+# Generated output
+data/output/
+
+# Claude Code
+.claude/
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Python environments
+.env
+venv/
+.venv/
