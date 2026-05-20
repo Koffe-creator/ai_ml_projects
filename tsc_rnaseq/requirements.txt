@@ -1,0 +1,10 @@
+numpy
+pandas
+scipy
+scanpy
+harmonypy
+matplotlib
+seaborn
+statsmodels
+anndata
+leidenalg
