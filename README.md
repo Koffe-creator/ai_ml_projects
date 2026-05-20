@@ -14,6 +14,7 @@ A collection of machine learning and AI exercises covering a range of techniques
 | [Hauck-Donner Effect](Hauck_Donner_Effect/) | Simulation of the Wald test pathology in logistic regression association studies | Base R, GLM, LRT, Permutation test |
 | [SMILES to Pathway](smiles_to_pathway/) | Biological pathway enrichment from chemical structure input | RDKit, PyTorch, GSEApy, KEGG |
 | [Clinical Trial Analysis](clinical_trial_test_data/) | Longitudinal biomarker analysis across treatment groups and time points | lme4, emmeans, ggplot2 |
+| [scRNA-seq Pipeline](tsc_rnaseq/) | Single-cell RNA-seq simulation and full analysis pipeline | scanpy, Harmony, Leiden, Wilcoxon DE |
 
 ---
 
