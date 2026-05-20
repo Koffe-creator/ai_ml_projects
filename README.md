@@ -1,6 +1,6 @@
 # AI & ML Projects
 
-A collection of machine learning and AI exercises covering a range of techniques, datasets, and deployment patterns.
+A collection of multi-omics, machine learning and AI exercises covering a range of techniques, datasets, and deployment patterns.
 
 ## Projects
 
