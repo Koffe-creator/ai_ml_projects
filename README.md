@@ -15,6 +15,7 @@ A collection of multi-omics, machine learning and AI exercises covering a range 
 | [SMILES to Pathway](smiles_to_pathway/) | Biological pathway enrichment from chemical structure input | RDKit, PyTorch, GSEApy, KEGG |
 | [Clinical Trial Analysis](clinical_trial_test_data/) | Longitudinal biomarker analysis across treatment groups and time points | lme4, emmeans, ggplot2 |
 | [scRNA-seq Pipeline](tsc_rnaseq/) | Single-cell RNA-seq simulation and full analysis pipeline | scanpy, Harmony, Leiden, Wilcoxon DE |
+| [Omics Foundation Model Evaluation](omics_fm_eval/) | Benchmark suite comparing single-cell foundation models against classical baselines, with an LLM-as-evaluator layer | Geneformer, PCA, scanpy, LLM-as-judge |
 
 ---
 

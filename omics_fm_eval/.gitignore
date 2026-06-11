@@ -1,0 +1,8 @@
+.DS_Store
+.pybiomart.sqlite
+__pycache__/
+*.pyc
+models/checkpoints/
+results/*.json
+*.h5ad
+*.loom

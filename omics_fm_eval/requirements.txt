@@ -1,0 +1,15 @@
+scanpy
+anndata
+scikit-learn
+numpy
+pandas
+matplotlib
+seaborn
+anthropic
+pyyaml
+pybiomart
+
+# Geneformer must be installed separately from the HuggingFace repo:
+#   git clone https://huggingface.co/ctheodoris/Geneformer
+#   pip install ./Geneformer
+# Also requires: transformers==4.46.0, loompy
