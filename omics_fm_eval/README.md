@@ -9,6 +9,8 @@ simple baselines or a general-purpose LLM?**
 
 ### Phase 1 — Foundation-model benchmark (embeddings + linear probe)
 
+It answers the question: Do foundation-model embeddings capture cell-type identity better than simple baselines?
+
 Each method turns every cell into a vector (an *embedding*), then we test how
 well that embedding captures cell-type identity:
 
@@ -24,6 +26,8 @@ a fair head-to-head: *does the 104M-parameter foundation model produce a more
 cell-type-separable embedding than a 2-second PCA?*
 
 ### Phase 2 — LLM-as-evaluator (zero-shot annotation from marker genes)
+
+It answers the question: Can a general-purpose LLM annotate cell types from gene names alone, and how reliable is it?
 
 A completely different approach that never touches embeddings:
 
