@@ -4,5 +4,7 @@ __pycache__/
 *.pyc
 models/checkpoints/
 results/*.json
+results/*.csv
 *.h5ad
 *.loom
+.env

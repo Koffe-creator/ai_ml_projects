@@ -1,0 +1,8 @@
+2026-06-12 15:37:05  dataset=pbmc  method=pca  Accuracy = 0.945
+2026-06-12 15:37:05  dataset=pbmc  method=llm_judge  Accuracy = 0.750
+2026-06-12 15:37:45  dataset=pbmc  method=pca  Accuracy = 0.945
+2026-06-12 15:37:45  dataset=pbmc  method=llm_judge  Accuracy = 0.875
+2026-06-12 15:38:05  dataset=pbmc  method=pca  Accuracy = 0.945
+2026-06-12 15:38:05  dataset=pbmc  method=llm_judge  Accuracy = 0.750
+2026-06-12 16:05:05  dataset=pbmc68k  method=pca  Accuracy = 0.779
+2026-06-12 16:05:05  dataset=pbmc68k  method=llm_judge  Accuracy = 0.500

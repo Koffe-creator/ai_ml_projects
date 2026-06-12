@@ -8,6 +8,7 @@ seaborn
 anthropic
 pyyaml
 pybiomart
+python-dotenv
 
 # Geneformer must be installed separately from the HuggingFace repo:
 #   git clone https://huggingface.co/ctheodoris/Geneformer
