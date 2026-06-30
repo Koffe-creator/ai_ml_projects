@@ -16,7 +16,7 @@ import pandas as pd
 from rdkit import Chem
 from rdkit.Chem import Descriptors, Lipinski, rdMolDescriptors, rdFingerprintGenerator
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, StratifiedKFold
 from sklearn.metrics import roc_auc_score, average_precision_score
 
 
@@ -73,13 +73,28 @@ for name, rows in feature_sets:
     model = RandomForestClassifier(
         n_estimators=300, class_weight="balanced", random_state=0, n_jobs=-1
     )
-    model.fit(X_train, y_train)
-    probs = model.predict_proba(X_test)[:, 1]
 
     print()
     print("===", name, "===")
-    print("ROC-AUC          :", round(roc_auc_score(y_test, probs), 3))
-    print("Average precision:", round(average_precision_score(y_test, probs), 3))
+
+    # 10-fold cross-validation on the training data.
+    # Each fold trains on 9/10 of the training set and scores the held-out 1/10,
+    # so we get 10 ROC-AUC values and can report their mean and spread.
+    kfold = StratifiedKFold(n_splits=10, shuffle=True, random_state=0)
+    fold_aucs = []
+    for train_idx, val_idx in kfold.split(X_train, y_train):
+        model.fit(X_train.iloc[train_idx], y_train.iloc[train_idx])
+        val_probs = model.predict_proba(X_train.iloc[val_idx])[:, 1]
+        fold_aucs.append(roc_auc_score(y_train.iloc[val_idx], val_probs))
+
+    fold_aucs = pd.Series(fold_aucs)
+    print("10-fold CV ROC-AUC : %.3f +/- %.3f" % (fold_aucs.mean(), fold_aucs.std()))
+
+    # Now fit on all the training data and score the held-out test set once.
+    model.fit(X_train, y_train)
+    probs = model.predict_proba(X_test)[:, 1]
+    print("held-out test ROC-AUC          :", round(roc_auc_score(y_test, probs), 3))
+    print("held-out test average precision:", round(average_precision_score(y_test, probs), 3))
 
     # the descriptor importances are interpretable; fingerprint bits are not
     if name == "descriptors":

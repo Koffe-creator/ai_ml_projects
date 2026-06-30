@@ -15,6 +15,8 @@ molecule's SMILES string, decide if it belongs to the mental-health indication.
 2. A random forest is trained on each feature set. The label is imbalanced
    (~14% active), so we use `class_weight="balanced"` and report **ROC-AUC** and
    **average precision** instead of accuracy.
+3. Performance is estimated with **10-fold cross-validation on the training set**
+   (mean ± standard deviation), then confirmed once on a held-out test set.
 
 > **Data note:** the full dataset is not included. A 300-row sample
 > (`data/sample_compounds.csv`) is provided so the pipeline runs out of the box;
@@ -22,10 +24,14 @@ molecule's SMILES string, decide if it belongs to the mental-health indication.
 
 ## Results (15,116 compounds, 2,156 mental-health-active)
 
-| Features | ROC-AUC | Avg precision | Interpretable |
-|---|---|---|---|
-| 7 descriptors | 0.673 | 0.253 | yes |
-| Morgan fingerprint (2048-bit) | 0.722 | 0.294 | no |
+| Features | 10-fold CV ROC-AUC | Test ROC-AUC | Test avg precision | Interpretable |
+|---|---|---|---|---|
+| 7 descriptors | 0.672 ± 0.017 | 0.673 | 0.253 | yes |
+| Morgan fingerprint (2048-bit) | 0.703 ± 0.018 | 0.722 | 0.294 | no |
+
+The cross-validation mean matches the held-out test score, and the small spread
+(±0.017) shows the estimate is stable across folds rather than the luck of one
+split.
 
 Two takeaways:
 
