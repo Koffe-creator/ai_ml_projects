@@ -1,0 +1,7 @@
+anthropic
+scikit-learn
+python-dotenv
+deepeval
+pytest
+jupyterlab
+pypdf

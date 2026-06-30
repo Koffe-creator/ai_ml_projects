@@ -1,0 +1,10 @@
+[
+  {"question": "Which receptor chain does the antibody dupilumab target?", "relevant_doc": "ad_dupilumab.txt"},
+  {"question": "What nanotechnology approach is proposed for delivering atopic dermatitis drugs to the skin without reaching systemic circulation?", "relevant_doc": "ad_filaggrin.txt"},
+  {"question": "Atopic dermatitis is the leading cause of the global burden from which kind of disease?", "relevant_doc": "ad_itch.txt"},
+  {"question": "Which oral JAK inhibitors met endpoints in trials for moderate-to-severe atopic dermatitis?", "relevant_doc": "ad_jak.txt"},
+  {"question": "How does Staphylococcus aureus skin colonization change in atopic dermatitis?", "relevant_doc": "ad_microbiome.txt"},
+  {"question": "Besides the skin, which organ systems are part of the atopic spectrum?", "relevant_doc": "ad_overview.txt"},
+  {"question": "What proportion of children and adults does atopic dermatitis affect?", "relevant_doc": "ad_pediatric.txt"},
+  {"question": "What is the first-line topical treatment for atopic dermatitis flare-ups?", "relevant_doc": "ad_topical.txt"}
+]
