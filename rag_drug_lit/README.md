@@ -34,7 +34,12 @@ Ask a question (retrieve → cited answer):
 ```bash
 python -m rag.ask "Which receptor does dupilumab target?"
 python -m rag.ask --k 4 "What treatments exist for moderate-to-severe atopic dermatitis?"
+python -m rag.ask --eval "Which receptor does dupilumab target?"   # also print DeepEval scores
 ```
+
+`--k` sets how many passages to retrieve (default 3). `--eval` additionally
+scores the answer with DeepEval faithfulness + answer relevancy (needs
+`OPENAI_API_KEY`).
 
 Evaluate retrieval quality (free, no LLM):
 
