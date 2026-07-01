@@ -58,18 +58,22 @@ each stored with its title and PMID. To rebuild or extend it:
 python fetch_pubmed.py          # edit the TOPICS dict to change subjects
 ```
 
-### Adding papers as PDF
+### Adding full papers as PDF
 
-Papers usually arrive as PDF. Drop them into `raw_pdfs/` and run the ingestion
-step once — it extracts plain text into `corpus/` (one `.txt` per PDF). The
-retriever only reads `.txt`, so nothing downstream changes.
+Abstracts are short; full papers arrive as PDF. `fetch_pdfs.py` downloads a few
+open-access atopic-dermatitis papers from Europe PMC into `raw_pdfs/`, and
+`ingest_pdfs.py` extracts their plain text into `corpus/` (one `.txt` per PDF).
+The retriever only reads `.txt`, so nothing downstream changes.
 
 ```bash
-python ingest_pdfs.py
+python fetch_pdfs.py     # open-access PDFs -> raw_pdfs/  (edit pmc_ids to change)
+python ingest_pdfs.py    # PDFs -> corpus/*.txt
 ```
 
 Only plain text is extracted (no formatting or images) because TF-IDF retrieval
-just needs words — no need to convert PDF to docx first.
+just needs words — no need to convert PDF to docx first. The PDFs themselves and
+the extracted `corpus/PMC*.txt` are gitignored (regenerate them with the two
+commands above); the committed corpus is the curated set of abstracts.
 
 ## Design notes (talking points)
 
