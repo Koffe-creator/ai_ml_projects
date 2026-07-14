@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
+
+# kept local only (per request) - not pushed
+perturbseq_walkthrough.ipynb
+
+# large public dataset, auto-downloaded by pertpy (562 MB) - do not commit
+data/*.h5mu

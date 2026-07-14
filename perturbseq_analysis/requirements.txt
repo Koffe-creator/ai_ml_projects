@@ -1,0 +1,4 @@
+scanpy
+pertpy
+matplotlib
+jupyterlab
