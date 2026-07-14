@@ -1,0 +1,6 @@
+scvi-tools
+scanpy
+scikit-learn
+matplotlib
+jupyterlab
+harmonypy
