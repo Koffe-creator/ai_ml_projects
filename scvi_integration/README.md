@@ -13,7 +13,7 @@ vs whole-cell vs sorted differ strongly, creating a technical **batch effect**.
 
 ## Result
 
-| Method | batch mixing (higher = better) | cell-type silhouette (higher = better) |
+| Method | batch mixing (higher/better) | cell-type silhouette (higher/better) |
 |---|---|---|
 | PCA (baseline) | 0.212 | 0.151 |
 | Harmony | **0.382** | 0.171 |
