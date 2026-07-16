@@ -2,7 +2,7 @@
 
 A retrieval-augmented generation (RAG) system that answers questions from a
 corpus of **real PubMed abstracts on atopic dermatitis**, with **inline
-citations** and a **hallucination guard** — plus a two-tier evaluation of both
+citations** and a **hallucination guard**  plus a two-tier evaluation of both
 retrieval and answer quality.
 
 ## What it does
@@ -54,7 +54,7 @@ Evaluate answer quality with DeepEval (GPT judge, a few cents):
 python -m pytest eval/test_rag_deepeval.py -v
 ```
 
-## The corpus — real PubMed abstracts
+## The corpus: real PubMed abstracts
 
 `corpus/` holds real abstracts pulled from PubMed via NCBI's E-utilities API,
 each stored with its title and PMID. To rebuild or extend it:
