@@ -6,7 +6,7 @@ clinical labels as ground truth and benchmark AlphaMissense against them.
 
 ## Headline finding
 
-AlphaMissense is strong overall (**ROC-AUC 0.944**) — **but it missed a critical
+AlphaMissense is strong overall (**ROC-AUC 0.944**)  **but it missed a critical
 mutation.** The most common Niemann-Pick disease type C1 mutation, **NPC1 I1061T**
 (written *I1063T* in some papers), is **definitively pathogenic in ClinVar**
 (multiple independent submissions), yet AlphaMissense scores it **0.303 and calls
@@ -52,7 +52,7 @@ Or open `alphamissense_walkthrough.ipynb` to step through it.
 ## Honest caveats
 
 - **Class imbalance** (479 pathogenic vs 121 benign) inflates average precision —
-  ROC-AUC is the more reliable summary here.
+  ROC-AUC is the more reliable summary here
 - **Circularity:** AlphaMissense was partly calibrated on ClinVar-like data, so
   benchmarking *on* ClinVar can be optimistic.
 - **Sample size:** 600 definite-label missense variants across 10 genes — a demo
